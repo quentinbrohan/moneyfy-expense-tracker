@@ -1,0 +1,23 @@
+@import 'src/styles/vars';
+
+#root {
+  width: 80%;
+  margin: 2rem 0;
+}
+
+.container {
+  margin: 2rem auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 960px) {
+      display: block;
+    }
+}
+
+.left,
+.right {
+  width: 100%;
+  margin: 2rem;
+}

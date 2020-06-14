@@ -1,0 +1,15 @@
+@import 'src/styles/vars';
+
+footer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+  color: $colBlack;
+  a, a:visited {
+    color: $colBlack;
+  }
+  img {
+    height: 2rem;
+  }
+}

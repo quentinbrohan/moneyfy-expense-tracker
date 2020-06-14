@@ -1,0 +1,53 @@
+@import 'src/styles/vars';
+
+.transaction {
+  &-minus {
+    color: $colRed;
+  }
+  &-plus {
+    color: $colGreen;
+  }
+}
+
+.list {
+  padding: 0;
+  margin-bottom: 2rem;
+  list-style-type: none;
+  li {
+    padding: 1rem 0.5rem;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color: $colBlack;
+    background-color: $colWhite;
+    border-bottom: 1px solid $colGrey;
+    .plus {
+      border-right: 1rem solid $colGreen;
+    }
+    .minus {
+      border-right: 1rem solid $colRed;
+    }
+  }
+}
+
+.delete {
+  opacity: 0;
+  // top: 50%;
+  left: -1rem;
+  width: 2rem;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  color: $colWhite;
+  font-size: 1.4rem;
+  line-height: 150%;
+  background-color: $colBlack;
+  border: 0;
+  transform: translate(-100%, -50%);
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.list li:hover .delete {
+  opacity: 1;
+}

@@ -1,0 +1,48 @@
+@import 'src/styles/vars';
+
+.form-group {
+  margin-bottom: 1rem;
+  div {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+label {
+  margin: 0.5rem 0;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+input[type='text'],
+input[type='number'] {
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  color: $colBlack;
+  background-color: $colWhite;
+  border: 1px solid $colGrey;
+  border-radius: 0.1rem;
+}
+
+button {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: $colBlack;
+  background-color: transparent;
+  border: 2px solid $colBlack;
+  cursor: pointer;
+  &:focus, .delete {
+    outline: 0;
+  }
+  &:hover {
+    background-color: $colBlack;
+    color: $colWhite;
+    transition: all ease 0.1s;
+  }
+}

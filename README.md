@@ -2,13 +2,11 @@
 
 ![Moneyfy](./repo-moneyfy.png)
 
- Traqueur de dépenses utilisant React Context API.
-
+Expense tracker using ContextAPI from React.
 
 ## Features
-- Voir son solde
-- Dépenses
-- Revenu
-- Ajouter une transaction
-- Supprimer une transaction
-- Responsive
+- Check your balance
+- Incomes
+- Outcomes
+- Add a transaction
+- Delete a transaction

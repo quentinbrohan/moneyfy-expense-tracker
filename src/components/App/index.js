@@ -7,10 +7,9 @@ import Footer from 'src/components/Footer';
 import Balance from 'src/components/Balance';
 import IncomeExpenses from 'src/components/IncomeExpenses';
 import TransactionsList from 'src/components/TransactionsList';
-import AddTransaction from 'src/components/AddTransaction';
+import SaveTransaction from 'src/components/SaveTransaction';
 
 import { GlobalProvider } from 'src/context/GlobalState';
-// import './styles.css';
 import './styles.scss';
 
 // == Composant
@@ -21,7 +20,7 @@ const App = () => (
       <div className="left">
         <Balance />
         <IncomeExpenses />
-        <AddTransaction />
+        <SaveTransaction />
       </div>
       <div className="right">
         <TransactionsList />

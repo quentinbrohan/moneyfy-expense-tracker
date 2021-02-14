@@ -1,4 +1,4 @@
-@import 'src/styles/vars';
+@import "src/styles/vars";
 
 .form-group {
   margin-bottom: 1rem;
@@ -8,6 +8,10 @@
   }
 }
 
+.error {
+  color: $colRed;
+}
+
 label {
   margin: 0.5rem 0;
   display: inline-block;
@@ -15,8 +19,7 @@ label {
   font-size: 1.2rem;
 }
 
-input[type='text'],
-input[type='number'] {
+input {
   display: block;
   padding: 0.5rem;
   width: 100%;
@@ -25,6 +28,17 @@ input[type='number'] {
   background-color: $colWhite;
   border: 1px solid $colGrey;
   border-radius: 0.1rem;
+
+  &.neutral {
+    border-color: $colGrey;
+  }
+
+  &.positive {
+    border-color: $colGreen;
+  }
+  &.negative {
+    border-color: $colRed;
+  }
 }
 
 button {
@@ -37,7 +51,8 @@ button {
   background-color: transparent;
   border: 2px solid $colBlack;
   cursor: pointer;
-  &:focus, .delete {
+  &:focus,
+  .delete {
     outline: 0;
   }
   &:hover {

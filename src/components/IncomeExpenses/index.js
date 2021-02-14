@@ -2,23 +2,16 @@ import React, { useContext } from 'react';
 import { GlobalContext } from 'src/context/GlobalState';
 import './incomeExpenses.scss';
 
-
 const IncomeExpenses = () => {
   const { transactions } = useContext(GlobalContext);
 
-  const amounts = transactions.map((transaction) => transaction.amount);
+  const income = transactions
+    ?.filter((transaction) => transaction.amount > 0)
+    .reduce((inc, { amount }) => inc + amount, 0);
 
-  const income = amounts.length > 0 && amounts.filter((amount) => amount > 0).length > 0
-    ? amounts.filter((amount) => amount > 0).reduce((acc, amount) => acc + amount).toFixed(2)
-    : 0.00;
-
-
-  const expense = amounts.length > 0 && amounts.filter((amount) => amount < 0).length > 0
-    ? (
-      amounts.filter((amount) => amount < 0).reduce((acc, amount) => acc + amount) * -1)
-      .toFixed(2)
-    : 0.00;
-
+  const expense = transactions
+    ?.filter((transaction) => transaction.amount < 0)
+    .reduce((exp, { amount }) => exp + amount, 0) * -1;
 
   return (
     <div className="inc-exp-container">

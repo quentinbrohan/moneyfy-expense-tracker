@@ -5,12 +5,6 @@ import AppReducer from './AppReducer';
 // Initial State
 const initialState = {
   transactions: [],
-  // [
-  //   { id: 1, name: 'Restaurant - Fondue et Irish Coffee', amount: -35 },
-  //   { id: 2, name: 'Création site web', amount: 300 },
-  //   { id: 3, name: 'Livre - The Doors of Perception, Aldous Huxley', amount: -10 },
-  //   { id: 4, name: 'Polaroïd', amount: 120 },
-  // ],
 };
 
 // Create context
@@ -28,19 +22,20 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  function addTransaction(transaction) {
+  function saveTransaction(transaction) {
     dispatch({
-      type: 'ADD_TRANSACTION',
+      type: 'SAVE_TRANSACTION',
       payload: transaction,
     });
   }
 
   return (
-    <GlobalContext.Provider value={{
-      transactions: state.transactions,
-      deleteTransaction,
-      addTransaction,
-    }}
+    <GlobalContext.Provider
+      value={{
+        transactions: state.transactions,
+        deleteTransaction,
+        saveTransaction,
+      }}
     >
       {children}
     </GlobalContext.Provider>
@@ -48,5 +43,5 @@ export const GlobalProvider = ({ children }) => {
 };
 
 GlobalProvider.propTypes = {
-  children: PropTypes.array.isRequired,
+  children: PropTypes.node.isRequired,
 };

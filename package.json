@@ -42,9 +42,9 @@
     "style-loader": "*",
     "terser-webpack-plugin": "*",
     "webpack": "*",
-    "webpack-cli": "*",
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "*",
-    "webpack-merge": "*"
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "prop-types": "*",
